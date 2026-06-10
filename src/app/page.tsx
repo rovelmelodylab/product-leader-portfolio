@@ -154,7 +154,17 @@ export default function Home() {
         </h2>
 
         <div className="space-y-2">
-          <p>LinkedIn: https://www.linkedin.com/in/roopashreeyadav/</p>
+          <p>
+            LinkedIn:{" "}
+            <a
+              href="https://www.linkedin.com/in/roopashreeyadav"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              https://www.linkedin.com/in/roopashreeyadav/
+            </a>
+          </p>
           <p>GitHub: github.com/rovelmelodylab</p>
           <p>Email: (Coming Soon)</p>
         </div>
