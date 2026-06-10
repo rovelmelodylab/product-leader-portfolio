@@ -7,7 +7,7 @@ export default function Home() {
         Product Leader | Platform Strategy | AI-Enabled Enterprise Products
       </p>
 
-      <h2>Portfolio Under Construction</h2>
+      <h2>Building the Future of Enterprise AI Products</h2>
 
       <p>
         Building AI products, case studies and product leadership content.
