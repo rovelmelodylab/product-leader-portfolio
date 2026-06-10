@@ -154,7 +154,7 @@ export default function Home() {
         </h2>
 
         <div className="space-y-2">
-          <p>LinkedIn: (Coming Soon)</p>
+          <p>LinkedIn: https://www.linkedin.com/in/roopashreeyadav/</p>
           <p>GitHub: github.com/rovelmelodylab</p>
           <p>Email: (Coming Soon)</p>
         </div>
