@@ -35,6 +35,35 @@ export default function ClaimsResolutionPlatform() {
       </p>
 
       <h2 className="text-3xl font-semibold mb-4">
+          Proposed Workflow
+        </h2>
+
+        <div className="mb-8">
+          <p>Claim Submitted</p>
+          <p>↓</p>
+
+          <p>Claim Intake Agent</p>
+          <p>↓</p>
+
+          <p>Policy Review Agent</p>
+          <p>↓</p>
+
+          <p>Risk Assessment Agent</p>
+          <p>↓</p>
+
+          <p>Recommendation Agent</p>
+          <p>↓</p>
+
+          <p>Claims Analyst Review</p>
+          <p>↓</p>
+
+          <p>Approve / Reject / Escalate</p>
+          <p>↓</p>
+
+          <p>Audit Trail</p>
+        </div>
+
+      <h2 className="text-3xl font-semibold mb-4">
         Current Status
       </h2>
 
