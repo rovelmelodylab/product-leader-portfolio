@@ -25,9 +25,38 @@ export default function Home() {
         </p>
       </section>
 
+    <section className="mt-16 mb-24">
+      <h2 className="text-3xl font-bold mb-6">
+        Featured Projects
+      </h2>
+
+      <div className="border rounded-lg p-8 hover:shadow-lg transition-shadow">
+        <h3 className="text-3xl font-bold mb-4">
+          AI-Powered Claims Resolution Platform
+        </h3>
+
+        <div className="inline-block bg-gray-100 rounded px-3 py-1 text-sm mb-4">
+          In Progress •   AI Product Portfolio Project
+        </div>
+        <p className="mb-4">
+          A human-in-the-loop AI platform that helps insurance claims teams
+          investigate, assess, and resolve complex claim exceptions faster
+          while maintaining governance, auditability, and decision accountability.
+        </p>
+
+        <a
+          href="/projects/ai-claims-resolution-platform"
+          className="text-blue-600 font-medium hover:underline"
+        >
+          View Project →
+        </a>
+      </div>
+    </section>
+
+  
       {/* Impact Section */}
       <section className="mb-20">
-        <h2 className="text-3xl font-semibold mb-8">
+        <h2 className="text-3xl font-bold mt-8 mb-8">
           Career Impact
         </h2>
 
@@ -172,4 +201,10 @@ export default function Home() {
 
     </main>
   );
+
+
+
+
+
 }
+
