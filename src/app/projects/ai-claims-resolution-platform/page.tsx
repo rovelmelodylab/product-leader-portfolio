@@ -157,6 +157,191 @@ export default function ClaimsResolutionPlatform() {
         </p>
 
       </div>
+
+      <h2 className="text-3xl font-semibold mb-6">
+        Architecture Overview
+      </h2>
+
+      <div className="flex justify-center mb-12">
+        <Image
+          src="/images/claims-architecture_v2.png"
+          alt="AI Claims Resolution Platform Architecture"
+          width={300}
+          height={700}
+          className="w-full max-w-5xl h-auto"
+        />
+      </div>
+
+      <h2 className="text-3xl font-semibold mb-6">
+        Architecture Overview
+      </h2>
+
+        <p className="mb-8">
+          The platform uses a human-in-the-loop AI architecture designed to accelerate
+          claim investigations while maintaining governance, explainability, and
+          decision accountability. AI agents assist with document analysis, policy
+          interpretation, risk assessment, and recommendation generation, while human
+          analysts remain responsible for final claim decisions.
+        </p>
+
+        <h3 className="text-2xl font-semibold mb-4">
+          Core Components
+        </h3>
+
+        <div className="space-y-6 mb-12">
+
+          <div>
+            <h4 className="font-semibold text-lg">Claim Intake Layer</h4>
+            <p>
+              Receives claim submissions, supporting documents, images, and customer
+              information from multiple intake channels. Standardizes incoming data for
+              downstream processing.
+            </p>
+          </div>
+
+          <div>
+            <h4 className="font-semibold text-lg">Document Repository</h4>
+            <p>
+              Stores claims, policy documents, supporting evidence, and historical
+              claim information used during AI-assisted investigations.
+            </p>
+          </div>
+
+          <div>
+            <h4 className="font-semibold text-lg">AI Orchestrator</h4>
+            <p>
+              Coordinates agent workflows, manages task sequencing, passes context
+              between agents, and consolidates findings into a unified investigation
+              outcome.
+            </p>
+          </div>
+
+          <div>
+            <h4 className="font-semibold text-lg">Policy Review Agent</h4>
+            <p>
+              Retrieves and analyzes policy coverage, exclusions, deductibles, limits,
+              and relevant policy conditions to determine applicability to the claim.
+            </p>
+          </div>
+
+          <div>
+            <h4 className="font-semibold text-lg">Risk Assessment Agent</h4>
+            <p>
+              Identifies risk signals, missing information, coverage ambiguities, and
+              other factors that may require additional investigation or escalation.
+            </p>
+          </div>
+
+          <div>
+            <h4 className="font-semibold text-lg">Recommendation Agent</h4>
+            <p>
+              Generates explainable recommendations including approval, rejection,
+              escalation, or requests for additional information based on the evidence
+              gathered during investigation.
+            </p>
+          </div>
+
+          <div>
+            <h4 className="font-semibold text-lg">Human Review Portal</h4>
+            <p>
+              Enables claims analysts to review AI findings, provide overrides when
+              necessary, and make final claim decisions while preserving human
+              accountability.
+            </p>
+          </div>
+
+          <div>
+            <h4 className="font-semibold text-lg">Audit & Decision Repository</h4>
+            <p>
+              Captures AI recommendations, analyst decisions, overrides, supporting
+              rationale, and decision history to support compliance, governance, and
+              audit requirements.
+            </p>
+          </div>
+
+        </div>
+
+        <h3 className="text-2xl font-semibold mb-4">
+          Design Principles
+        </h3>
+
+        <ul className="list-disc pl-6 space-y-3 mb-12">
+          <li>
+            Human analysts remain accountable for all final claim decisions.
+          </li>
+
+          <li>
+            AI recommendations must be explainable and supported by evidence.
+          </li>
+
+          <li>
+            Agent responsibilities are separated to improve maintainability,
+            scalability, and future extensibility.
+          </li>
+
+          <li>
+            Every recommendation and decision is auditable to support regulatory and
+            operational governance requirements.
+          </li>
+
+          <li>
+            The architecture is intentionally domain-agnostic and can be extended to regulatory, compliance, financial operations, and customer service exception workflows.
+          </li>
+        </ul>
+
+    <h2 className="text-3xl font-semibold mb-6">
+      Success Metrics
+    </h2>
+
+    <p className="mb-8">
+      The platform is designed to improve claims operations by reducing manual
+      investigation effort while maintaining decision quality, governance, and
+      regulatory compliance.
+    </p>
+
+    <div className="space-y-8 mb-12">
+
+      <div>
+        <h3 className="text-2xl font-semibold mb-3">
+          Business Metrics
+        </h3>
+
+        <ul className="list-disc pl-6 space-y-2">
+          <li>Average claim resolution time</li>
+          <li>Claims processed per analyst</li>
+          <li>Cost per claim investigation</li>
+          <li>Claim backlog reduction</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 className="text-2xl font-semibold mb-3">
+          Product Metrics
+        </h3>
+
+        <ul className="list-disc pl-6 space-y-2">
+          <li>Recommendation acceptance rate</li>
+          <li>Analyst override rate</li>
+          <li>Investigation time saved per claim</li>
+          <li>User satisfaction score</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 className="text-2xl font-semibold mb-3">
+          AI Metrics
+        </h3>
+
+        <ul className="list-disc pl-6 space-y-2">
+          <li>Recommendation accuracy</li>
+          <li>Confidence score distribution</li>
+          <li>False positive rate</li>
+          <li>Percentage of recommendations with supporting rationale</li>
+        </ul>
+      </div>
+
+    </div>
+
       <h2 className="text-3xl font-semibold mb-4">
         Current Status
       </h2>
