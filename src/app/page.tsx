@@ -51,6 +51,27 @@ export default function Home() {
           View Project →
         </a>
       </div>
+
+      <div className="border rounded-lg p-8 hover:shadow-lg transition-shadow">
+        <h3 className="text-3xl font-bold mb-4">
+          AI Vendor Risk Review Platform
+        </h3>
+
+        <div className="inline-block bg-gray-100 rounded px-3 py-1 text-sm mb-4">
+          (Planned)
+        </div>
+        </div>
+
+      <div className="border rounded-lg p-8 hover:shadow-lg transition-shadow">
+        <h3 className="text-3xl font-bold mb-4">
+          AI Regulatory Change Intelligence Platform
+        </h3>
+
+        <div className="inline-block bg-gray-100 rounded px-3 py-1 text-sm mb-4">
+          (Planned)
+        </div>
+        </div>
+
     </section>
 
   
