@@ -173,29 +173,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Initiative */}
-      <section className="mb-20">
-        <h2 className="text-3xl font-semibold mb-8">
-          Featured Initiative
-        </h2>
-
-        <div className="border rounded-lg p-6">
-          <h3 className="text-2xl font-semibold mb-2">
-            Enterprise AI Operations Platform
-          </h3>
-
-          <p className="mb-4">
-            Currently Designing & Building
-          </p>
-
-          <p>
-            Exploring how AI agents, workflow orchestration,
-            human review loops, and enterprise governance can be
-            combined to automate complex operational processes
-            while preserving compliance, transparency, and control.
-          </p>
-        </div>
-      </section>
 
       {/* Contact */}
       <section>
@@ -216,7 +193,7 @@ export default function Home() {
             </a>
           </p>
           <p>GitHub: github.com/rovelmelodylab</p>
-          <p>Email: (Coming Soon)</p>
+          <p>Open to conversations about product leadership, platform strategy, and AI-enabled enterprise products. Connect on LinkedIn.</p>
         </div>
       </section>
 
