@@ -506,7 +506,14 @@ export default function ClaimsResolutionPlatform() {
         </div>
       </section>
 
-
+        <div className="mt-12 text-center">
+          <a
+            href="/projects/ai-claims-resolution-platform/demo"
+            className="inline-block border px-8 py-4 rounded font-semibold"
+          >
+            Explore the Interactive Claims Workbench →
+          </a>
+        </div>
     </main>
   );
 }
