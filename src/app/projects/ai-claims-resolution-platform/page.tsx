@@ -158,198 +158,354 @@ export default function ClaimsResolutionPlatform() {
 
       </div>
 
-      <h2 className="text-3xl font-semibold mb-6">
-        Architecture Overview
-      </h2>
+      <section className="mt-16">
+        <h2 className="text-3xl font-bold mb-6">
+          Product Strategy & Personas
+        </h2>
 
-      <div className="flex justify-center mb-12">
-        <Image
-          src="/images/claims-architecture_v2.png"
-          alt="AI Claims Resolution Platform Architecture"
-          width={300}
-          height={700}
-          className="w-full max-w-5xl h-auto"
-        />
-      </div>
-
-      <h2 className="text-3xl font-semibold mb-6">
-        Architecture Overview
-      </h2>
-
-        <p className="mb-8">
-          The platform uses a human-in-the-loop AI architecture designed to accelerate
-          claim investigations while maintaining governance, explainability, and
-          decision accountability. AI agents assist with document analysis, policy
-          interpretation, risk assessment, and recommendation generation, while human
-          analysts remain responsible for final claim decisions.
-        </p>
-
-        <h3 className="text-2xl font-semibold mb-4">
-          Core Components
-        </h3>
-
-        <div className="space-y-6 mb-12">
+        <div className="space-y-8">
 
           <div>
-            <h4 className="font-semibold text-lg">Claim Intake Layer</h4>
-            <p>
-              Receives claim submissions, supporting documents, images, and customer
-              information from multiple intake channels. Standardizes incoming data for
-              downstream processing.
-            </p>
+            <h3 className="text-xl font-semibold mb-2">
+              Primary Users
+            </h3>
+
+            <ul className="list-disc pl-6 space-y-2">
+              <li>Claims Analysts reviewing complex claims</li>
+              <li>Claims Supervisors managing escalations</li>
+              <li>Compliance Teams overseeing decision governance</li>
+              <li>Operations Leaders responsible for throughput and quality</li>
+            </ul>
           </div>
 
           <div>
-            <h4 className="font-semibold text-lg">Document Repository</h4>
-            <p>
-              Stores claims, policy documents, supporting evidence, and historical
-              claim information used during AI-assisted investigations.
-            </p>
+            <h3 className="text-xl font-semibold mb-2">
+              Key Problems Addressed
+            </h3>
+
+            <ul className="list-disc pl-6 space-y-2">
+              <li>Large volumes of claims requiring manual review</li>
+              <li>Inconsistent analyst decisions</li>
+              <li>Slow exception resolution workflows</li>
+              <li>Limited visibility into decision rationale</li>
+              <li>Regulatory and audit risks associated with automation</li>
+            </ul>
           </div>
 
           <div>
-            <h4 className="font-semibold text-lg">AI Orchestrator</h4>
-            <p>
-              Coordinates agent workflows, manages task sequencing, passes context
-              between agents, and consolidates findings into a unified investigation
-              outcome.
-            </p>
-          </div>
+            <h3 className="text-xl font-semibold mb-2">
+              Product Vision
+            </h3>
 
-          <div>
-            <h4 className="font-semibold text-lg">Policy Review Agent</h4>
             <p>
-              Retrieves and analyzes policy coverage, exclusions, deductibles, limits,
-              and relevant policy conditions to determine applicability to the claim.
-            </p>
-          </div>
-
-          <div>
-            <h4 className="font-semibold text-lg">Risk Assessment Agent</h4>
-            <p>
-              Identifies risk signals, missing information, coverage ambiguities, and
-              other factors that may require additional investigation or escalation.
-            </p>
-          </div>
-
-          <div>
-            <h4 className="font-semibold text-lg">Recommendation Agent</h4>
-            <p>
-              Generates explainable recommendations including approval, rejection,
-              escalation, or requests for additional information based on the evidence
-              gathered during investigation.
-            </p>
-          </div>
-
-          <div>
-            <h4 className="font-semibold text-lg">Human Review Portal</h4>
-            <p>
-              Enables claims analysts to review AI findings, provide overrides when
-              necessary, and make final claim decisions while preserving human
-              accountability.
-            </p>
-          </div>
-
-          <div>
-            <h4 className="font-semibold text-lg">Audit & Decision Repository</h4>
-            <p>
-              Captures AI recommendations, analyst decisions, overrides, supporting
-              rationale, and decision history to support compliance, governance, and
-              audit requirements.
+              Enable claims organizations to automate routine decisions
+              while ensuring complex exceptions remain transparent,
+              explainable, and under human control.
             </p>
           </div>
 
         </div>
+      </section>
 
-        <h3 className="text-2xl font-semibold mb-4">
-          Design Principles
-        </h3>
+      <section className="mt-16">
+        <h2 className="text-3xl font-semibold mb-6">
+          Architecture 
+        </h2>
 
-        <ul className="list-disc pl-6 space-y-3 mb-12">
-          <li>
-            Human analysts remain accountable for all final claim decisions.
-          </li>
+        <div className="flex justify-center mb-12">
+          <Image
+            src="/images/claims-architecture_v2.png"
+            alt="AI Claims Resolution Platform Architecture"
+            width={300}
+            height={700}
+            className="w-full max-w-5xl h-auto"
+          />
+        </div>
 
-          <li>
-            AI recommendations must be explainable and supported by evidence.
-          </li>
+        <h2 className="text-3xl font-semibold mb-6">
+          Architecture Overview
+        </h2>
 
-          <li>
-            Agent responsibilities are separated to improve maintainability,
-            scalability, and future extensibility.
-          </li>
+          <p className="mb-8">
+            The platform uses a human-in-the-loop AI architecture designed to accelerate
+            claim investigations while maintaining governance, explainability, and
+            decision accountability. AI agents assist with document analysis, policy
+            interpretation, risk assessment, and recommendation generation, while human
+            analysts remain responsible for final claim decisions.
+          </p>
 
-          <li>
-            Every recommendation and decision is auditable to support regulatory and
-            operational governance requirements.
-          </li>
+          <h3 className="text-2xl font-semibold mb-4">
+            Core Components
+          </h3>
 
-          <li>
-            The architecture is intentionally domain-agnostic and can be extended to regulatory, compliance, financial operations, and customer service exception workflows.
-          </li>
-        </ul>
+          <div className="space-y-6 mb-12">
 
-    <h2 className="text-3xl font-semibold mb-6">
-      Success Metrics
-    </h2>
+            <div>
+              <h4 className="font-semibold text-lg">Claim Intake Layer</h4>
+              <p>
+                Receives claim submissions, supporting documents, images, and customer
+                information from multiple intake channels. Standardizes incoming data for
+                downstream processing.
+              </p>
+            </div>
 
-    <p className="mb-8">
-      The platform is designed to improve claims operations by reducing manual
-      investigation effort while maintaining decision quality, governance, and
-      regulatory compliance.
-    </p>
+            <div>
+              <h4 className="font-semibold text-lg">Document Repository</h4>
+              <p>
+                Stores claims, policy documents, supporting evidence, and historical
+                claim information used during AI-assisted investigations.
+              </p>
+            </div>
 
-    <div className="space-y-8 mb-12">
+            <div>
+              <h4 className="font-semibold text-lg">AI Orchestrator</h4>
+              <p>
+                Coordinates agent workflows, manages task sequencing, passes context
+                between agents, and consolidates findings into a unified investigation
+                outcome.
+              </p>
+            </div>
 
-      <div>
-        <h3 className="text-2xl font-semibold mb-3">
-          Business Metrics
-        </h3>
+            <div>
+              <h4 className="font-semibold text-lg">Policy Review Agent</h4>
+              <p>
+                Retrieves and analyzes policy coverage, exclusions, deductibles, limits,
+                and relevant policy conditions to determine applicability to the claim.
+              </p>
+            </div>
 
-        <ul className="list-disc pl-6 space-y-2">
-          <li>Average claim resolution time</li>
-          <li>Claims processed per analyst</li>
-          <li>Cost per claim investigation</li>
-          <li>Claim backlog reduction</li>
-        </ul>
-      </div>
+            <div>
+              <h4 className="font-semibold text-lg">Risk Assessment Agent</h4>
+              <p>
+                Identifies risk signals, missing information, coverage ambiguities, and
+                other factors that may require additional investigation or escalation.
+              </p>
+            </div>
 
-      <div>
-        <h3 className="text-2xl font-semibold mb-3">
-          Product Metrics
-        </h3>
+            <div>
+              <h4 className="font-semibold text-lg">Recommendation Agent</h4>
+              <p>
+                Generates explainable recommendations including approval, rejection,
+                escalation, or requests for additional information based on the evidence
+                gathered during investigation.
+              </p>
+            </div>
 
-        <ul className="list-disc pl-6 space-y-2">
-          <li>Recommendation acceptance rate</li>
-          <li>Analyst override rate</li>
-          <li>Investigation time saved per claim</li>
-          <li>User satisfaction score</li>
-        </ul>
-      </div>
+            <div>
+              <h4 className="font-semibold text-lg">Human Review Portal</h4>
+              <p>
+                Enables claims analysts to review AI findings, provide overrides when
+                necessary, and make final claim decisions while preserving human
+                accountability.
+              </p>
+            </div>
 
-      <div>
-        <h3 className="text-2xl font-semibold mb-3">
-          AI Metrics
-        </h3>
+            <div>
+              <h4 className="font-semibold text-lg">Audit & Decision Repository</h4>
+              <p>
+                Captures AI recommendations, analyst decisions, overrides, supporting
+                rationale, and decision history to support compliance, governance, and
+                audit requirements.
+              </p>
+            </div>
 
-        <ul className="list-disc pl-6 space-y-2">
-          <li>Recommendation accuracy</li>
-          <li>Confidence score distribution</li>
-          <li>False positive rate</li>
-          <li>Percentage of recommendations with supporting rationale</li>
-        </ul>
-      </div>
+          </div>
 
-    </div>
+          <h3 className="text-2xl font-semibold mb-4">
+            Design Principles
+          </h3>
 
-      <h2 className="text-3xl font-semibold mb-4">
-        Current Status
-      </h2>
+          <ul className="list-disc pl-6 space-y-3 mb-12">
+            <li>
+              Human analysts remain accountable for all final claim decisions.
+            </li>
 
-      <p>
-        Product strategy, requirements, and architecture are currently
-        being defined as part of an AI product leadership portfolio project.
-      </p>
+            <li>
+              AI recommendations must be explainable and supported by evidence.
+            </li>
+
+            <li>
+              Agent responsibilities are separated to improve maintainability,
+              scalability, and future extensibility.
+            </li>
+
+            <li>
+              Every recommendation and decision is auditable to support regulatory and
+              operational governance requirements.
+            </li>
+
+            <li>
+              The architecture is intentionally domain-agnostic and can be extended to regulatory, compliance, financial operations, and customer service exception workflows.
+            </li>
+          </ul>
+      </section>
+      <section className="mt-16">
+        <h2 className="text-3xl font-bold mb-6">
+          Product Decisions & Trade-Offs
+        </h2>
+
+        <div className="space-y-6">
+
+          <div>
+            <h3 className="text-xl font-semibold mb-2">
+              Why Human-in-the-Loop?
+            </h3>
+
+            <p>
+              Insurance claims often contain incomplete information,
+              policy ambiguities, and exception scenarios that cannot
+              be fully automated without introducing financial,
+              regulatory, or customer experience risks.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-xl font-semibold mb-2">
+              Key Product Trade-Offs
+            </h3>
+
+            <ul className="list-disc pl-6 space-y-2">
+              <li>Automation vs Human Oversight</li>
+              <li>Accuracy vs Throughput</li>
+              <li>Explainability vs Model Complexity</li>
+              <li>Cost Reduction vs Risk Exposure</li>
+              <li>AI Recommendations vs Human Authority</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+    
+      <section className="mt-16">
+        <h2 className="text-3xl font-bold mb-6">
+          Success Metrics
+        </h2>
+
+        <div className="grid md:grid-cols-3 gap-6">
+
+          <div className="border rounded p-6">
+            <h3 className="font-semibold mb-3">
+              Business Metrics
+            </h3>
+
+            <ul className="space-y-2 text-sm">
+              <li>40% reduction in manual review effort</li>
+              <li>25% faster claim resolution</li>
+              <li>15% reduction in escalations</li>
+              <li>90% analyst adoption</li>
+            </ul>
+          </div>
+
+          <div className="border rounded p-6">
+            <h3 className="font-semibold mb-3">
+              Operational Metrics
+            </h3>
+
+            <ul className="space-y-2 text-sm">
+              <li>Average resolution time</li>
+              <li>Recommendation accuracy</li>
+              <li>False positive rate</li>
+              <li>Analyst productivity</li>
+            </ul>
+          </div>
+
+          <div className="border rounded p-6">
+            <h3 className="font-semibold mb-3">
+              AI Metrics
+            </h3>
+
+            <ul className="space-y-2 text-sm">
+              <li>Confidence score distribution</li>
+              <li>Override rate</li>
+              <li>Explainability coverage</li>
+              <li>Decision consistency</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <section className="mt-16">
+        <h2 className="text-3xl font-bold mb-6">
+          Product Leadership Perspective
+        </h2>
+
+        <div className="space-y-6">
+
+          <div>
+            <h3 className="text-xl font-semibold mb-2">
+              Why Start with a Rule-Based Engine?
+            </h3>
+
+            <p>
+              The initial release prioritizes explainability,
+              governance, and rapid validation over model sophistication.
+              Deterministic decision rules provide predictable outcomes,
+              support audit requirements, and enable teams to validate
+              workflow effectiveness before introducing generative AI.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-xl font-semibold mb-2">
+              Key Risks
+            </h3>
+
+            <ul className="list-disc pl-6 space-y-2">
+              <li>False positives from simplistic rule matching</li>
+              <li>Inconsistent policy interpretation</li>
+              <li>Over-reliance on AI recommendations</li>
+              <li>Insufficient explainability for regulated decisions</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-xl font-semibold mb-2">
+              Key Learnings
+            </h3>
+
+            <ul className="list-disc pl-6 space-y-2">
+              <li>Human review remains essential for exception workflows</li>
+              <li>Explainability is often more important than automation rate</li>
+              <li>Auditability must be designed from the beginning</li>
+              <li>Decision quality matters more than workflow speed alone</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <section className="mt-16 mb-16">
+        <h2 className="text-3xl font-bold mb-6">
+          Product Roadmap
+        </h2>
+
+        <div className="space-y-4">
+
+          <div className="border rounded p-4">
+            <strong>Phase 1:</strong> Rule-Based Decision Engine
+          </div>
+
+          <div className="border rounded p-4">
+            <strong>Phase 2:</strong> LLM-Powered Policy Interpretation
+          </div>
+
+          <div className="border rounded p-4">
+            <strong>Phase 3:</strong> Multi-Agent Workflow Orchestration
+          </div>
+
+          <div className="border rounded p-4">
+            <strong>Phase 4:</strong> Analyst Feedback Learning Loop
+          </div>
+
+          <div className="border rounded p-4">
+            <strong>Phase 5:</strong> Enterprise Governance & Audit Controls
+          </div>
+
+        </div>
+      </section>
+
 
     </main>
   );
